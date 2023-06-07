@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistir Linha Direta na Globoplay</title>
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+
+    <!--CSS 3-->
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <!--Font Awsome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <main>
+        <div class="banner" id="topo">
+            <div class="filtro">
+                <header class="cabecalho">
+                    <div class="navegacao">
+                        <div class="menu-btn-mobile">
+                            <button onclick="openMenu()"><i class="fa-solid fa-bars"></i></button>
+                        </div>
+                        <div class="logo">
+                            <a href="#"><img src="img/globoplay-logo.png" alt="Logo" title="Globoplay"></a>
+                        </div>
+                        <nav class="menu-container">
+                            <ul class="menu-principal">
+                                <li><a href="#"><i class="fa-solid fa-house"></i> Início</a></li>
+                                <li><a href="#"><i class="fa-solid fa-satellite-dish"></i> Agora na TV</a></li>
+                                <li><a href="#">Novelas</a></li>
+                                <li><a href="#">Séries</a></li>
+                                <li><a href="#">Filmes</a></li>
+                                <li><a href="#">Esportes</a></li>
+                                <li><a href="#">Explore</a></li>
+                            </ul>
+                        </nav>
+                        <div class="menu-secundario-container">
+                            <ul class="menu-secundario">
+                                <li>
+                                    <a href="#"><i class="fa-solid fa-magnifying-glass" title="Buscar"></i></a>
+                                </li>
+                                <li onclick="openSino()">
+                                    <a href="#"><i class="fa-solid fa-bell"></i></a>
+                                </li>
+                                <li onclick="openUser()">
+                                    <a href="#"><i class="fa-solid fa-user"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="menu-mobile">
+                        <ul class="mobile-primario">
+                            <li><a href="#"><i class="fa-solid fa-house"></i> Início</a></li>
+                            <li><a href="#"><i class="fa-solid fa-bell"></i> Novidades</a></li>
+                            <hr>
+                            <li><a href="#"><i class="fa-solid fa-satellite-dish"></i> Agora na TV</a></li>
+                            <li><a href="#"><i class="fa-brands fa-wpexplorer"></i> Explore</a></li>
+                            <hr>
+                            <li><a href="#"><i class="fa-solid fa-circle-info"></i> Ajuda</a></li>
+                            <li><a href="#"><i class="fa-solid fa-gear"></i> Configurações</a></li>
+                        </ul>
+                    </div>
+                </header>
+
+                <div class="espaco-menu"></div>
+
+                <section id="secao1">
+                    <h1>Linha Direta</h1>
+
+                    <div class="info">
+                        <div class="cards">
+                            <span class="classificacao">A14</span>
+                            <span class="qualidade">HD</span>
+                            <span class="closed-caption">CC</span>
+                        </div>
+
+
+                        <div class="modalidade">
+                            <span>Variedade</span>
+                            <span>Investigação</span>
+                            <span>2023</span>
+                        </div>
+                    </div>
+
+                    <div class="info-desc">
+                        <p>
+                            Precursor do gênero ‘true crime’ na TV brasileira, o Linha Direta está de volta e sob o
+                            comando de Pedro Bial. Com conteúdo investigativo, prestação de serviço, reportagens,
+                            entrevistas e simulações de casos que marcaram o país nos últimos 15 anos
+                        </p>
+                    </div>
+
+                    
+                    <div class="container-btn">
+                        <button class="assinante-btn">Assine já</button>
+                        <div class="botoes">
+                            <div class="trailer-btn"><i class="fa-solid fa-film"></i></div>
+                            <div class="favorito-btn"><i class="fa-solid fa-bookmark"></i></div>
+                        </div>
+                    </div>
+
+                    <p id="jabá"><i class="fa-solid fa-lock"></i> Assista na <span>Globoplay</span></p>
+                </section>
+            </div>
+        </div>
+
+        <section id="secao2">
+            <div class="lista-controles">
+                <a href="#" id="ativo">Episódios</a>
+                <a href="#">Trailers</a>
+                <a href="#">Trechos</a>
+                <a href="#">Detalhes</a>
+            </div>
+    
+            <div class="data">
+                <span><i class="fa-solid fa-calendar-days"></i> Buscar data</span>
+            </div>
+    
+            <div class="episodios">
+                <div class="ep">
+                    <h3>Caso Eloá</h3>
+                    <div class="video">
+                        <div class="selo">
+                            <span>Assinante</span>
+                        </div>
+                        <div class="play">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                        <a href="#">
+                            <div class="thumb">
+                                <img src="img/thumb-eps.webp" alt="Caso Eloá">
+                            </div>
+                        </a>
+                    </div>
+                    <button class="modal-btn" onclick="modalEp1()"><i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="modal-ep" id="modal-ep1">
+                        <p>
+                            Pedro Bial apresenta o primeiro programa: ‘O Caso Eloá’. Após 15 anos, volta o programa que ajudou a prender mais de 400 foragidos no Brasil.
+                        </p>
+                    </div>
+                </div>
+    
+                <div class="ep">
+                    <h3>A Barbárie de Queimadas</h3>
+                    <div class="video">
+                        <div class="selo">
+                            <span>Assinante</span>
+                        </div>
+                        <div class="play">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                        <a href="#">
+                            <div class="thumb">
+                                <img src="img/thumb-eps.webp" alt="Caso Eloá">
+                            </div>
+                        </a>
+                    </div>
+                    <button class="modal-btn" onclick="modalEp2()"><i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="modal-ep" id="modal-ep2">
+                        <p>
+                            Em 2012, uma noite de terror se instaurou em Queimadas, na Paraíba, quando uma festa de aniversário terminou com o estupro coletivo de cinco convidadas, duas delas assassinadas após reconhecerem os criminosos.
+                        </p>
+                    </div>
+                </div>
+    
+                <div class="ep">
+                    <h3>O Caso Henry Borel</h3>
+                    <div class="video">
+                        <div class="selo">
+                            <span>Assinante</span>
+                        </div>
+                        <div class="play">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                        <a href="#">
+                            <div class="thumb">
+                                <img src="img/thumb-eps.webp" alt="Caso Eloá">
+                            </div>
+                        </a>
+                    </div>
+                    <button class="modal-btn" onclick="modalEp3()"><i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="modal-ep" id="modal-ep3">
+                        <p>
+                            Em março de 2021, Henry Borel, de quatro anos, foi morto no apartamento em que vivia com o padrasto, o médico e ex-vereador Jairo Souza Santos Júnior, conhecido como Dr. Jairinho, e a mãe, Monique Medeiros, no Rio de Janeiro. O laudo apontou lesões no crânio, ferimentos internos e diversos hematomas pelo corpo.
+                        </p>
+                    </div>
+                </div>
+    
+                <div class="ep">
+                    <h3>Golpe dos Nudes</h3>
+                    <div class="video">
+                        <div class="selo">
+                            <span>Assinante</span>
+                        </div>
+                        <div class="play">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                        <a href="#">
+                            <div class="thumb">
+                                <img src="img/thumb-eps.webp" alt="Caso Eloá">
+                            </div>
+                        </a>
+                    </div>
+                    <button class="modal-btn" onclick="modalEp4()"><i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="modal-ep" id="modal-ep4">
+                        <p>
+                            Esquema idealizado por quadrilha incluía plano minuciosamente arquitetado, encenações convincentes, cenários realistas, e ameaças reais. Tudo não passava de um grande golpe comandado de dentro de presídios para extorquir homens, que recebiam nudes de mulheres supostamente menores de idade.
+                        </p>
+                    </div>
+                </div>
+    
+                <div class="ep">
+                    <h3>O serial-killer de Curitiba</h3>
+                    <div class="video">
+                        <div class="selo">
+                            <span>Assinante</span>
+                        </div>
+                        <div class="play">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                        <a href="#">
+                            <div class="thumb">
+                                <img src="img/thumb-eps.webp" alt="Caso Eloá">
+                            </div>
+                        </a>
+                    </div>
+                    <button class="modal-btn" onclick="modalEp5()"><i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="modal-ep" id="modal-ep5">
+                        <p>
+                            A história de um serial-killer, assassino em série que agia em plena pandemia, mostra a trajetória de crimes cometidos por José Tiago Correia Soroka contra homens gays no Sul do país.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="topo">
+            <a href="#topo"><i class="fa-solid fa-chevron-up"></i></a>
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <p>
+            &copy; Globo Comunicação e Participações S.A. Todos os direitos reservados
+        </p>
+        <p>
+            <a href="#">Termos e políticas</a>
+        </p>
+    </footer>
+    <!--JavaScript-->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

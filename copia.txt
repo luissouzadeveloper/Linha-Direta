@@ -1,0 +1,697 @@
+HTML
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistir Linha Direta na Globoplay</title>
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+
+    <!--CSS 3-->
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <!--Font Awsome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="banner">
+        <div class="filtro">
+            <header class="cabecalho">
+                <div class="navegacao">
+                    <div class="menu-btn-mobile">
+                        <button><i class="fa-solid fa-bars"></i></button>
+                    </div>
+                    <div class="logo">
+                        <a href="#"><img src="img/globoplay-logo.png" alt="Logo" title="Globoplay"></a>
+                    </div>
+                    <nav class="menu-container">
+                        <ul class="menu-principal">
+                            <li><a href="#"><i class="fa-solid fa-house"></i> Início</a></li>
+                            <li><a href="#"><i class="fa-solid fa-satellite-dish"></i> Agora na TV</a></li>
+                            <li><a href="#">Novelas</a></li>
+                            <li><a href="#">Séries</a></li>
+                            <li><a href="#">Filmes</a></li>
+                            <li><a href="#">Esportes</a></li>
+                            <li><a href="#">Explore</a></li>
+                        </ul>
+                    </nav>
+                    <div class="menu-secundario-container">
+                        <ul class="menu-secundario">
+                            <li>
+                                <a href="#"><i class="fa-solid fa-magnifying-glass" title="Buscar"></i></a>
+                            </li>
+                            <li onclick="openSino()">
+                                <a href="#"><i class="fa-solid fa-bell"></i></a>
+                            </li>
+                            <li onclick="openUser()">
+                                <a href="#"><i class="fa-solid fa-user"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="menu-mobile">
+                    <ul class="mobile-primario">
+                        <li><a href="#"><i class="fa-solid fa-house"></i> Início</a></li>
+                        <li><a href="#"><i class="fa-solid fa-bell"></i> Novidades</a></li>
+                        <hr>
+                        <li><a href="#"><i class="fa-solid fa-satellite-dish"></i> Agora na TV</a></li>
+                        <li><a href="#"><i class="fa-brands fa-wpexplorer"></i> Explore</a></li>
+                        <hr>
+                        <li><a href="#"><i class="fa-solid fa-circle-info"></i> Ajuda</a></li>
+                        <li><a href="#"><i class="fa-solid fa-gear"></i> Configurações</a></li>
+                    </ul>
+                </div>
+            </header>
+            <div class="modal-sino">
+                <div>
+                    <img src="img/globo-modal.png" alt="">
+                    <p>
+                        Novidades: veja aqui os lançamentos.
+                    </p>
+                </div>
+            </div>
+            <div class="espaco-menu"></div>
+            <section id="secao1">
+                <h1>Linha Direta</h1>
+
+                <div class="info">
+                    <span class="classificacao">A14</span>
+
+                    <span class="qualidade">HD</span>
+
+                    <span class="closed-caption">CC</span>
+
+
+                    <div class="modalidade">
+                        <span>Variedade</span>
+                        <span>Investigação</span>
+                        <span>2023</span>
+                    </div>
+                </div>
+
+                <div class="info-desc">
+                    <p>
+                        Precursor do gênero ‘true crime’ na TV brasileira, o Linha Direta está de volta e sob o
+                        comando de Pedro Bial. Com conteúdo investigativo, prestação de serviço, reportagens,
+                        entrevistas e simulações de casos que marcaram o país nos últimos 15 anos
+                    </p>
+                </div>
+
+                <div class="botoes">
+                    <button class="assinante-btn">Assine já</button>
+                    <div class="trailer-btn"><i class="fa-solid fa-film"></i></div>
+                    <div class="favorito-btn"><i class="fa-solid fa-bookmark"></i></div>
+                </div>
+
+                <p id="jabá"><i class="fa-solid fa-lock"></i> Assista na <span>Globoplay</span></p>
+            </section>
+        </div>
+    </div>
+    <section id="secao2">
+        <div class="lista-controles">
+            <a href="#" id="ativo">Episódios</a>
+            <a href="#">Trailers</a>
+            <a href="#">Trechos</a>
+            <a href="#">Detalhes</a>
+        </div>
+
+        <div class="data">
+            <span><i class="fa-solid fa-calendar-days"></i> Buscar data</span>
+        </div>
+
+        <div class="episodios">
+            <div class="ep">
+                <h3>Caso Eloá</h3>
+                <div class="video">
+                    <div class="selo">
+                        <span>Assinante</span>
+                    </div>
+                    <div class="play">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                    <a href="#">
+                        <div class="thumb">
+                            <img src="img/thumb-eps.webp" alt="Caso Eloá">
+                        </div>
+                    </a>
+                </div>
+                <button class="modal-btn" onclick="modalEp1()"><i class="fa-solid fa-chevron-down"></i></button>
+                <div class="modal-ep" id="modal-ep1">
+                    <p>
+                        Pedro Bial apresenta o primeiro programa: ‘O Caso Eloá’. Após 15 anos, volta o programa que ajudou a prender mais de 400 foragidos no Brasil.
+                    </p>
+                </div>
+            </div>
+
+            <div class="ep">
+                <h3>A Barbárie de Queimadas</h3>
+                <div class="video">
+                    <div class="selo">
+                        <span>Assinante</span>
+                    </div>
+                    <div class="play">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                    <a href="#">
+                        <div class="thumb">
+                            <img src="img/thumb-eps.webp" alt="Caso Eloá">
+                        </div>
+                    </a>
+                </div>
+                <button class="modal-btn" onclick="modalEp2()"><i class="fa-solid fa-chevron-down"></i></button>
+                <div class="modal-ep" id="modal-ep2">
+                    <p>
+                        Em 2012, uma noite de terror se instaurou em Queimadas, na Paraíba, quando uma festa de aniversário terminou com o estupro coletivo de cinco convidadas, duas delas assassinadas após reconhecerem os criminosos.
+                    </p>
+                </div>
+            </div>
+
+            <div class="ep">
+                <h3>O Caso Henry Borel</h3>
+                <div class="video">
+                    <div class="selo">
+                        <span>Assinante</span>
+                    </div>
+                    <div class="play">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                    <a href="#">
+                        <div class="thumb">
+                            <img src="img/thumb-eps.webp" alt="Caso Eloá">
+                        </div>
+                    </a>
+                </div>
+                <button class="modal-btn" onclick="modalEp3()"><i class="fa-solid fa-chevron-down"></i></button>
+                <div class="modal-ep" id="modal-ep3">
+                    <p>
+                        Em março de 2021, Henry Borel, de quatro anos, foi morto no apartamento em que vivia com o padrasto, o médico e ex-vereador Jairo Souza Santos Júnior, conhecido como Dr. Jairinho, e a mãe, Monique Medeiros, no Rio de Janeiro. O laudo apontou lesões no crânio, ferimentos internos e diversos hematomas pelo corpo.
+                    </p>
+                </div>
+            </div>
+
+            <div class="ep">
+                <h3>Golpe dos Nudes</h3>
+                <div class="video">
+                    <div class="selo">
+                        <span>Assinante</span>
+                    </div>
+                    <div class="play">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                    <a href="#">
+                        <div class="thumb">
+                            <img src="img/thumb-eps.webp" alt="Caso Eloá">
+                        </div>
+                    </a>
+                </div>
+                <button class="modal-btn" onclick="modalEp4()"><i class="fa-solid fa-chevron-down"></i></button>
+                <div class="modal-ep" id="modal-ep4">
+                    <p>
+                        Esquema idealizado por quadrilha incluía plano minuciosamente arquitetado, encenações convincentes, cenários realistas, e ameaças reais. Tudo não passava de um grande golpe comandado de dentro de presídios para extorquir homens, que recebiam nudes de mulheres supostamente menores de idade.
+                    </p>
+                </div>
+            </div>
+
+            <div class="ep">
+                <h3>O serial-killer de Curitiba</h3>
+                <div class="video">
+                    <div class="selo">
+                        <span>Assinante</span>
+                    </div>
+                    <div class="play">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                    <a href="#">
+                        <div class="thumb">
+                            <img src="img/thumb-eps.webp" alt="Caso Eloá">
+                        </div>
+                    </a>
+                </div>
+                <button class="modal-btn" onclick="modalEp5()"><i class="fa-solid fa-chevron-down"></i></button>
+                <div class="modal-ep" id="modal-ep5">
+                    <p>
+                        A história de um serial-killer, assassino em série que agia em plena pandemia, mostra a trajetória de crimes cometidos por José Tiago Correia Soroka contra homens gays no Sul do país.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <p>
+            &copy; Globo Comunicação e Participações S.A. Todos os direitos reservados
+        </p>
+        <p>
+            <a href="#">Termos e políticas</a>
+        </p>
+    </footer>
+    <!--JavaScript-->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
+
+CSS
+
+/*Reset*/
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    color: var(--branco);
+    text-decoration: none
+}
+h1{
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+h2{
+    font-size: 45px;
+    font-weight: 900;
+}
+h3{
+    font-size: 38px;
+    font-weight: 900;
+}
+
+/*Importação da fonte*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,900;1,400&family=Roboto:wght@900&display=swap');
+
+/*Variáveis*/
+:root{
+    --preto: #000;
+    --branco: #fff;
+    --cinza: #c4c4c4;
+    --cinza-escuro: #3d3d3d;
+    --preto-claro: #1f1f1f;
+    --vermelho-claro: #fb0234;
+    --laranja: #ff8f01;
+}
+
+/*Corpo da página*/
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    height: 100vh;
+}
+
+/*Menu e navegação*/
+.navegacao{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 13px 0;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+.menu-container li:first-child{
+    margin-left: 0;
+}
+.menu-container li{
+    margin: 0 10px;
+}
+.menu-secundario-container li{
+    margin: 0 7px;
+}
+.menu-principal, .menu-secundario{
+    display: flex;
+
+}
+.menu-principal li a, .menu-secundario li a{
+    font-size: 0.9em;
+    padding: 5px 5px;
+    border-radius: 10px;
+    transition: all 500ms ease-in-out;
+}
+.menu-principal li a:hover, .menu-secundario li a:hover{
+    background-color: var(--preto-claro);
+}
+.menu-rolado{
+    background-color: var(--cinza-escuro);
+    z-index: 1;
+}
+
+/*Menu mobile*/
+.menu-mobile{
+    background-color: var(--preto-claro);
+    width: 20%;
+    height: 50vh;
+    padding: 5px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: none;
+}
+.mobile-primario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+}
+.mobile-primario li{
+    margin: 10px 0;
+}
+.mobile-primario li a{
+    padding: 5px 5px;
+    border-radius: 10px;
+    transition: all 500ms ease-in-out;
+}
+.mobile-primario li a:hover{
+    background-color: var(--branco);
+    color: var(--preto-claro);
+}
+/*Botão mobile*/
+.menu-btn-mobile{
+    display: inline;
+    margin: 20px 30px;
+    width: 30%;
+}
+.menu-btn-mobile button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid var(--branco);
+    border-radius: 10px;
+    padding: 10px;
+}
+.menu-btn-mobile button i{
+    font-size: 3em;
+    color: var(--branco);
+}
+
+/*Modais menu*/
+.modal-sino{
+    position: absolute;
+    background-color: var(--cinza-escuro);
+    width: 30%;
+    right: 10px;
+    top: 10%;
+    border-radius: 10px;
+    padding: 7px;
+    display: none;
+}
+.modal-sino div{
+    display: flex;
+    align-items: center;
+}
+.modal-sino img{
+    width: 66px;
+    border-radius: 10px;
+}
+.modal-sino p{
+    margin-left: 15px;
+    color: var(--branco);
+}
+.open-sino{
+    display: block;
+}
+
+/*Banner*/
+.banner{
+    background-image: url(../img/linha-direta-bg.webp);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+.filtro{
+    height: 100vh;
+    background: linear-gradient(77.88deg,rgba(31, 31, 31, 0.8) 10.68%,rgba(31,31,31,0) 50.01%),linear-gradient(180deg,rgba(31,31,31,0) 25.78%,#1f1f1f 83.61%);
+}
+
+.espaco-menu{
+    height: 30vh;
+}
+
+/*Conteúdos*/
+section{
+    padding: 0 100px;
+}
+/*#corpo-principal{
+    padding: 0 100px;
+}*/
+
+/*Seçao 1*/
+#secao1{
+    padding: 0 100px;
+}
+#secao1 h1{
+    color: var(--branco);
+    font-size: 1.7em;
+    margin-bottom: 2%;
+}
+#secao1 .info{
+    display: flex;
+    align-items: center;
+    margin-bottom: 3%;
+}
+#secao1 .info > span{
+    margin: 0 7px;
+}
+#secao1 .info > span:first-child{
+    margin-left: 0;
+}
+
+.classificacao{
+    background-color: var(--laranja);
+    padding: 5px 7px;
+    border-radius: 10px;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: var(--branco);
+    border: 1px solid var(--branco);
+}
+.qualidade{
+    background-color: var(--preto-claro);
+    padding: 5px 7px;
+    border-radius: 10px;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: var(--branco);
+    border: 1px solid var(--branco);
+}
+.closed-caption{
+    background-color: var(--cinza-escuro);
+    padding: 5px 7px;
+    border-radius: 10px;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: var(--branco);
+    border: 1px solid var(--branco);
+}
+.modalidade > span{
+    color: var(--cinza);
+    margin: 0 7px;
+}
+.info-desc{
+    width: 70%;
+}
+.info-desc p{
+    color: var(--branco);
+    font-size: 0.9em;
+    text-align: justify;
+}
+.botoes{
+    display: flex;
+    align-items: center;
+    margin: 2.5% 0;
+}
+.assinante-btn{
+    background: linear-gradient(to left, var(--laranja), var(--vermelho-claro));
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: 15%;
+    color: var(--branco);
+    font-size: 1em;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+}
+.assinante-btn:hover, .trailer-btn:hover, .favorito-btn:hover{
+    background: var(--cinza);
+    color: var(--preto-claro);
+}
+.trailer-btn, .favorito-btn{
+    margin: 0 15px;
+    background-color: var(--cinza-escuro);
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: var(--branco);
+    transition: all 500ms ease-in-out;
+}
+#jabá{
+    color: var(--cinza);
+    font-size: 0.8em;
+}
+#jabá > span{
+    color: var(--cinza-escuro);
+}
+
+/*Seção 2*/
+#secao2{
+    min-height: 100vh;
+    background-color: var(--preto-claro);
+}
+.lista-controles{
+    display: flex;
+    align-items: center;
+    padding-bottom: 1%;
+    border-bottom: 2px solid var(--branco);
+}
+.lista-controles a{
+    margin: 0px 7px;
+    padding: 10px 0;
+    color: var(--cinza);
+    position: relative;
+    transition: all 200ms ease-in-out;
+}
+.lista-controles a::after{
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    width: 0%;
+    background-color: var(--branco);
+    height: 0.2rem;
+    transition: all 500ms ease-in-out;
+}
+.lista-controles a:hover::after{
+    width: 100%;
+    left: 2%;
+    color: var(--branco);
+}
+.lista-controles a:first-child{
+    margin-left: 0;
+}
+.data{
+    margin: 40px 20px;
+}
+.data > span{
+    background-color: var(--cinza-escuro);
+    padding: 15px 20px;
+    border-radius: 10px;
+    color: var(--branco);
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+.data > span:hover{
+    background-color: var(--cinza);
+    color: var(--cinza-escuro);
+}
+/*Episódios*/
+.episodios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.ep{
+    margin: 20px 100px;
+    width: 30%;
+}
+.ep h3{
+    color: var(--branco);
+    text-align: center;
+    margin-top: 20px;
+}
+.video{
+    position: relative;
+    margin-top: 20px;
+}
+.selo{
+    position: absolute;
+    background-color: var(--vermelho-claro);
+    border-top-left-radius: 10px;
+    padding: 5px;
+    color: var(--branco);
+}
+.play{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    transform: translateY(-50%);
+    color: var(--vermelho-claro);
+    font-size: 1.3em;
+}
+.video .thumb img{
+    width: 100%;
+    border-radius: 10px;
+}
+.modal-btn{
+    width: 100%;
+    height: 25px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    transition: all 300ms ease-in-out;
+}
+.modal-btn:hover{
+    border: 2px solid var(--branco);
+}
+.modal-btn i{
+    text-align: center;
+    font-size: 1.5em;
+    color: var(--branco);
+}
+.modal-ep{
+    display: none;
+}
+.modal-ep p{
+    color: var(--branco);
+    text-align: center;
+}
+.open-modal{
+    display: flex;
+    width: 100%;
+    background-color: var(--cinza-escuro);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--branco);
+    margin-top: 10px;
+    margin-bottom: 7px;
+    transition: all 500ms ease-in-out;
+}
+
+/*Rodapé*/
+footer.rodape{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--cinza-escuro);
+    padding: 5px 5px;
+}
+footer.rodape p{
+    color: var(--branco);
+    font-size: 0.8em;
+}
+footer.rodape p > a{
+    text-decoration: underline;
+}
+
+/*Ipads/Tablets*/
+@media (min-width: 481px) and (max-width: 768px){
+
+}
+
+/*Laptops*/
+@media (min-width: 769px) and (max-width: 1024px){
+
+}
