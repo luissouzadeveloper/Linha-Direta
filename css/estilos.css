@@ -161,7 +161,7 @@ body{
 /*Seçao 1*/
 #secao1{
     padding: 0 20px;
-    height: 100vh;
+    height: 100%;
 }
 #secao1 h1{
     color: var(--branco);
