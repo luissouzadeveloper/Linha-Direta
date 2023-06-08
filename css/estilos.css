@@ -276,7 +276,7 @@ body{
 
 /*Seção 2*/
 #secao2{
-    min-height: 100vh;
+    height: 100%;
     background-color: var(--preto-claro);
 }
 .lista-controles{
@@ -501,7 +501,7 @@ footer.rodape p > a{
 
     /*Seção 2*/
     #secao2{
-        min-height: 100vh;
+        height: 100%;
     }
     .lista-controles{
         justify-content: space-around;
@@ -572,7 +572,7 @@ footer.rodape p > a{
 
     /*Seção 2*/
     #secao2{
-        min-height: 100vh;
+        height: 100%;
     }
     .lista-controles{
         justify-content: space-around;
@@ -646,7 +646,7 @@ footer.rodape p > a{
 
     /*Seção 2*/
     #secao2{
-        min-height: 100vh;
+        height: 100%;
     }
     .lista-controles{
         justify-content: space-around;
