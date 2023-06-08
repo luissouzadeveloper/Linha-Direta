@@ -500,6 +500,9 @@ footer.rodape p > a{
     }
 
     /*Seção 2*/
+    #secao2{
+        min-height: 100vh;
+    }
     .lista-controles{
         justify-content: space-around;
     }
@@ -568,6 +571,9 @@ footer.rodape p > a{
     }
 
     /*Seção 2*/
+    #secao2{
+        min-height: 100vh;
+    }
     .lista-controles{
         justify-content: space-around;
     }
@@ -639,6 +645,9 @@ footer.rodape p > a{
     }
 
     /*Seção 2*/
+    #secao2{
+        min-height: 100vh;
+    }
     .lista-controles{
         justify-content: space-around;
     }
