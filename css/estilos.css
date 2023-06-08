@@ -276,7 +276,7 @@ body{
 
 /*Seção 2*/
 #secao2{
-    height: 100vh;
+    min-height: 100%;
     background-color: var(--preto-claro);
 }
 .lista-controles{
